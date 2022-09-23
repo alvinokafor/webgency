@@ -1,0 +1,76 @@
+/* CSS RESETS */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* MARGIN RESET */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+figure,
+picture {
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+  font-weight: 400;
+}
+
+/* IMAGE SETUP */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+  background-repeat: no-repeat;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* FORM SETUP */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* REMOVE ANIMATION FOR THOSE WHO HAVE IT TURNED OFF */
+@media (prefers-reduced-motion: reduce) {
+  *,
+*::before,
+*::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+/* CSS RESETS */
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+.container {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 90%;
+}
+
+body {
+  font-family: "Mulish", sans-serif;
+  font-size: 1.125rem;
+}/*# sourceMappingURL=main.css.map */
