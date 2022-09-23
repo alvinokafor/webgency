@@ -1,10 +1,53 @@
-.flex {
-  display: flex;
-  align-items: center;
+.button-basic {
+  color: #ffffff;
+  background-color: $primary;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  transition: all 300ms ease-in;
+
+  &:hover {
+    color: $primary;
+    border: 2px solid $primary;
+    background-color: transparent;
+  }
 }
 
-.container {
-  margin: 0 auto;
-  width: 100%;
-  max-width: 90%;
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  margin-inline: auto;
+}
+
+@mixin flex-align {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@mixin flex-basic {
+  display: flex;
+}
+
+@mixin container {
+  margin-inline: auto;
+  width: min(100% - 9.375rem, 71.3125rem);
+}
+
+// .container {
+//   margin-inline: auto;
+//   width: min(100% - 2rem, 60rem);
+// }
+
+// .container {
+//   margin-inline: auto;
+//   width: min(100% - 9.375rem, 71.3125rem);
+// }
+
+a {
+  color: $secondary-dark-text;
+}
+
+li {
+  list-style-type: none;
 }

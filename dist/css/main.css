@@ -59,18 +59,151 @@ select {
   }
 }
 /* CSS RESETS */
-.flex {
-  display: flex;
-  align-items: center;
+.button-basic, .hero-section .hero-content form .form-button button, nav ul li button {
+  color: #ffffff;
+  background-color: #FFA149;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  transition: all 300ms ease-in;
+}
+.button-basic:hover, .hero-section .hero-content form .form-button button:hover, nav ul li button:hover {
+  color: #FFA149;
+  border: 2px solid #FFA149;
+  background-color: transparent;
 }
 
-.container {
-  margin: 0 auto;
-  width: 100%;
-  max-width: 90%;
+a {
+  color: #333333;
+}
+
+li {
+  list-style-type: none;
 }
 
 body {
   font-family: "Mulish", sans-serif;
   font-size: 1.125rem;
+  overflow-x: hidden;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-inline: auto;
+  width: min(100% - 9.375rem, 71.3125rem);
+}
+nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+nav ul li {
+  margin-right: 61px;
+  transition: all 100ms ease-in;
+  padding-inline: 5px;
+}
+nav ul li:hover {
+  border-bottom: 2px solid #FFA149;
+  padding-bottom: 5px;
+}
+nav ul li a {
+  color: #333333;
+  font-weight: 600;
+}
+nav ul li button {
+  width: 148px;
+  height: 48px;
+}
+nav ul li:last-of-type {
+  margin-right: 0;
+  padding-inline: 0;
+}
+nav ul li:last-of-type:hover {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.hero-section {
+  margin-inline: auto;
+  width: min(100% - 9.375rem, 71.3125rem);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 87px;
+}
+.hero-section .hero-content {
+  position: relative;
+}
+.hero-section .hero-content h1 {
+  font-size: 3.375rem;
+  font-weight: 700;
+  color: #222222;
+  line-height: 140%;
+  margin-bottom: 45px;
+}
+.hero-section .hero-content p {
+  line-height: 170%;
+  color: #555555;
+  margin-bottom: 45px;
+  width: 381px;
+}
+.hero-section .hero-content form {
+  display: flex;
+  position: absolute;
+  background-color: #ffffff;
+  width: 750px;
+  height: 100px;
+  border: 0.5px solid #DDDDDD;
+}
+.hero-section .hero-content form input {
+  width: 33%;
+  border: none;
+  outline: none;
+  border-right: 0.5px solid #DDDDDD;
+}
+.hero-section .hero-content form .form-select {
+  width: 33%;
+}
+.hero-section .hero-content form .form-select select {
+  height: 100%;
+  border: none;
+  outline: none;
+  padding-right: 100px;
+}
+.hero-section .hero-content form input,
+.hero-section .hero-content form select {
+  padding-inline: 20px;
+  cursor: pointer;
+}
+.hero-section .hero-content form .form-button {
+  display: flex;
+  align-items: center;
+}
+.hero-section .hero-content form .form-button button {
+  width: 200px;
+  height: 60px;
+}
+.hero-section .hero-content form .form-button button:hover {
+  background-color: #ffbb7c;
+  color: #fff;
+  border: none;
+}
+.hero-section .hero-img {
+  display: flex;
+  margin-right: -220px;
+}
+.hero-section .hero-img .img1 {
+  width: 570px;
+  height: 540px;
+  margin-right: 10px;
+}
+.hero-section .hero-img .img-group .img2,
+.hero-section .hero-img .img-group .img3 {
+  width: 284px;
+  height: 260px;
+}
+.hero-section .hero-img .img-group .img2 {
+  margin-bottom: 10px;
 }/*# sourceMappingURL=main.css.map */
