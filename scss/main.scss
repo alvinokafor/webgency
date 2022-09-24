@@ -359,20 +359,61 @@ nav {
 
   &-cards {
     @include flex-basic;
-    // overflow-x: auto;
+    margin-top: 70px;
   
-    &::-webkit-scrollbar {
-      width: 0;
-    }
+    // &::-webkit-scrollbar {
+    //   width: 0;
+    // }
 
     &-item {
       min-width: 479px;
       height: 282px;
       margin-right: 30px;
+      padding-top: 40px;
+      padding-left: 20px;
+      padding-right: 16px;
       border: 0.5px solid $light-grey;
+      border-radius: 8px;
+      color: $secondary-dark-text;
+
+      &:first-of-type {
+        border: 0.5px solid $primary;
+      }
+
+     & p {
+        line-height: 170%;
+        margin-bottom: 24px;
+      }
+
+    .second-card-text {
+      margin-bottom: 55px;
+    }  
 
       &:last-of-type {
         margin-right: 0;
+      }
+
+      &-author {
+        @include flex-basic;
+        justify-items: center;
+
+        div:first-of-type { 
+          width: 54px;
+          height: 54px;
+          margin-right: 14px;
+        }
+
+        &-details {
+          h4 {
+            font-size: $body;
+            font-weight: $bold;
+            color: $secondary-dark-text;
+          }
+
+          p {
+            font-size: $small;
+          }
+        }
       }
     }
   }
