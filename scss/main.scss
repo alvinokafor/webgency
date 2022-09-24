@@ -51,12 +51,13 @@ nav {
 
 .hero-section {
   @include container;
-  @include flex-align;
+  @include flex-basic;
   // position: relative;
   // overflow-x: hidden;
   margin-top: 87px;
 
   .hero-content {
+    margin-top: 40px;
     position: relative;
     h1 {
       font-size: $title1;
@@ -129,7 +130,7 @@ nav {
     @include flex-basic;
     // width: 100vw;
     // max-width: 100vw;
-    margin-right: calc(-220px);
+    margin-right: -220px;
 
     .img1 {
       width: 570px;
@@ -146,6 +147,232 @@ nav {
 
       .img2 {
         margin-bottom: 10px;
+      }
+    }
+  }
+}
+
+.work-samples {
+  @include outer-container;
+  background-color: $grey-bg;
+  margin-top: 100px;
+  position: relative;
+  height: 745px;
+
+  &-content {
+    @include container;
+    padding-top: 175px;
+
+    h2 {
+      font-size: $heading1;
+      font-weight: $bold;
+      color: $dark-text;
+      margin-bottom: 1rem;
+    }
+
+    .samples-paragraph {
+      font-size: $body;
+      color: $paragraph-text;
+      line-height: 170%;
+      width: 769px;
+      margin-bottom: 4rem;
+    }
+  }
+
+  .work-sample-list {
+    p {
+      width: 116px;
+    }
+
+    display: flex;
+    flex-wrap: wrap;
+    position: absolute;
+
+    #left {
+      margin-right: 0 !important;
+    }
+
+    &-card {
+      width: 200px;
+      height: 200px;
+      background-color: #fff;
+      padding-left: 1.25rem;
+      margin-bottom: 2.375rem;
+      margin-right: 2.125rem;
+      transition: all 100ms ease-in;
+      cursor: pointer;
+
+      .work-sample-list-icon {
+        padding-top: 2.375rem;
+        margin-bottom: 2.875rem;
+      }
+    }
+
+    &-card:hover {
+      transform: scale(1.1);
+    }
+
+    .caret {
+      @include flex-direction(column);
+      text-align: center;
+      color: $blue;
+
+      p {
+        font-weight: $bold;
+        font-size: $body;
+      }
+
+      .work-sample-list-caret {
+        margin-top: 3.75rem;
+        margin-bottom: 1rem;
+      }
+    }
+  }
+}
+
+.features {
+  @include container;
+  margin-top: 11.25rem;
+
+  &-header h3 {
+    font-weight: $bold;
+    font-size: $body;
+    color: $primary;
+    margin-bottom: 0.25rem;
+  }
+
+  &-header h2 {
+    font-size: $heading1;
+    font-weight: $bold;
+    color: $dark-text;
+    margin-bottom: 1rem;
+  }
+
+  &-header p {
+    font-size: $body;
+    width: 40%;
+    line-height: 170%;
+    color: $paragraph-text;
+    margin-bottom: 4rem;
+  }
+
+  &-card-section {
+    @include flex-basic;
+    flex-wrap: wrap;
+
+    .features-card {
+      width: 380px;
+      height: 300px;
+      padding-left: 36px;
+      padding-top: 43px;
+
+      &:nth-of-type(1) p {
+        width: 323px;
+      }
+
+      &:nth-of-type(1),
+      &:nth-of-type(2),
+      &:nth-of-type(3) {
+        border-bottom: 0.5px solid $light-grey;
+      }
+
+      &:nth-of-type(1),
+      &:nth-of-type(2),
+      &:nth-of-type(4),
+      &:nth-of-type(5) {
+        border-right: 0.5px solid $light-grey;
+      }
+
+      div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        background-color: $primary-light;
+        border-radius: 50%;
+        width: 80px;
+        height: 80px;
+        margin-bottom: 24px;
+      }
+
+      h3 {
+        font-size: $heading3;
+        font-weight: $bold;
+        color: $secondary-dark-text;
+        margin-bottom: 12px;
+      }
+
+      P {
+        font-size: $body;
+        color: $paragraph-text;
+        line-height: 170%;
+      }
+    }
+  }
+}
+
+
+.testimonails {
+  @include container;
+ 
+  margin-top: 180px;
+
+  &-header {
+    & h3 {
+      color: $primary;
+      font-size: $body;
+      font-weight: $bold;
+      margin-bottom: 12px;
+    }
+
+    &-content {
+      @include flex-align;
+
+      & h2 {
+        color: $dark-text;
+        font-size: $heading1;
+        font-weight: $bold;
+      }
+    }
+
+    &-nav {
+      @include flex-align;
+
+      .arrow-left,
+      .arrow-right {
+        @include flex-dead-center;
+        width: 46px;
+        height: 46px;
+        border-radius: 50%;
+      }
+
+      .arrow-right {
+        background-color: $primary;
+      }
+
+      .arrow-left {
+        background-color: $light-grey;
+        margin-right: 12px;
+      }
+    }
+  }
+
+  &-cards {
+    @include flex-basic;
+    // overflow-x: auto;
+  
+    &::-webkit-scrollbar {
+      width: 0;
+    }
+
+    &-item {
+      min-width: 479px;
+      height: 282px;
+      margin-right: 30px;
+      border: 0.5px solid $light-grey;
+
+      &:last-of-type {
+        margin-right: 0;
       }
     }
   }

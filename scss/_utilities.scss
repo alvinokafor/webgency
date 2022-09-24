@@ -1,3 +1,4 @@
+//button base styles
 .button-basic {
   color: #ffffff;
   background-color: $primary;
@@ -13,12 +14,20 @@
   }
 }
 
+//flex center styling
 @mixin flex-center {
   display: flex;
   align-items: center;
   margin-inline: auto;
 }
 
+@mixin flex-dead-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+//flex align styling
 @mixin flex-align {
   display: flex;
   align-items: center;
@@ -32,6 +41,18 @@
 @mixin container {
   margin-inline: auto;
   width: min(100% - 9.375rem, 71.3125rem);
+}
+
+@mixin outer-container {
+  margin-inline: auto;
+  width: min(100% - 3.75rem, 82.5rem);
+}
+
+@mixin flex-direction($direction) {
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  flex-direction: $direction;
 }
 
 // .container {
