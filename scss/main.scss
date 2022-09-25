@@ -6,7 +6,12 @@ body {
   font-family: "Mulish", sans-serif;
   font-size: $body;
   overflow-x: hidden;
+  
 }
+
+
+
+
 
 nav {
   @include flex-align;
@@ -53,12 +58,15 @@ nav {
   @include container;
   @include flex-basic;
   // position: relative;
+  // overflow-x: auto;
   // overflow-x: hidden;
   margin-top: 87px;
 
   .hero-content {
     margin-top: 40px;
     position: relative;
+
+  
     h1 {
       font-size: $title1;
       font-weight: $bold;
@@ -259,6 +267,7 @@ nav {
   &-card-section {
     @include flex-basic;
     flex-wrap: wrap;
+   
 
     .features-card {
       width: 380px;
@@ -266,7 +275,8 @@ nav {
       padding-left: 36px;
       padding-top: 43px;
 
-      &:nth-of-type(1) p {
+      &:nth-of-type(1) p,
+      &:nth-of-type(4) p {
         width: 323px;
       }
 
@@ -313,11 +323,13 @@ nav {
 
 
 .testimonails {
-  @include container;
- 
+  // @include container;
+  // margin-inline: auto;
+  // min-width: 71.3125rem;
   margin-top: 180px;
 
   &-header {
+    @include container;
     & h3 {
       color: $primary;
       font-size: $body;
@@ -360,10 +372,14 @@ nav {
   &-cards {
     @include flex-basic;
     margin-top: 70px;
+    margin-left: 109px;
+    overflow-x: auto;
+    
+    
   
-    // &::-webkit-scrollbar {
-    //   width: 0;
-    // }
+    &::-webkit-scrollbar {
+      width: 0;
+    }
 
     &-item {
       min-width: 479px;
@@ -418,3 +434,7 @@ nav {
     }
   }
 }
+
+
+
+

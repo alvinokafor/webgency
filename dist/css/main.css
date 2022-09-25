@@ -312,7 +312,7 @@ nav ul li:last-of-type:hover {
   padding-left: 36px;
   padding-top: 43px;
 }
-.features-card-section .features-card:nth-of-type(1) p {
+.features-card-section .features-card:nth-of-type(1) p, .features-card-section .features-card:nth-of-type(4) p {
   width: 323px;
 }
 .features-card-section .features-card:nth-of-type(1), .features-card-section .features-card:nth-of-type(2), .features-card-section .features-card:nth-of-type(3) {
@@ -344,9 +344,11 @@ nav ul li:last-of-type:hover {
 }
 
 .testimonails {
+  margin-top: 180px;
+}
+.testimonails-header {
   margin-inline: auto;
   width: min(100% - 9.375rem, 71.3125rem);
-  margin-top: 180px;
 }
 .testimonails-header h3 {
   color: #FFA149;
@@ -388,6 +390,11 @@ nav ul li:last-of-type:hover {
 .testimonails-cards {
   display: flex;
   margin-top: 70px;
+  margin-left: 109px;
+  overflow-x: auto;
+}
+.testimonails-cards::-webkit-scrollbar {
+  width: 0;
 }
 .testimonails-cards-item {
   min-width: 479px;
